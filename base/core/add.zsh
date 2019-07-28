@@ -7,8 +7,9 @@ __zplug::core::add::to_zplugs()
 
     # DEPRECATED: pipe
     if [[ -p /dev/stdin ]]; then
-        __zplug::core::migration::pipe
-        return $status
+        echo "PATCHING ZPLUG (TAISHI8117): BYPASS PIPE DETECTION"
+        #__zplug::core::migration::pipe
+        #return $status
     fi
 
     # In the case of "from:local", it accepts multiple slashes
